@@ -1,0 +1,231 @@
+/* ----------------------------------------------------------------
+     [ 03 Start Navbar ]
+-----------------------------------------------------------------*/
+.navbar {
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100% !important;
+  border: 0;  
+  z-index: 9;
+  
+  
+  .space-head{
+    width:100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 2rem ;
+    margin-left: 2rem ;
+    display: flex;
+  }
+  .logo {
+    padding: 15px 0;
+    margin-top: -5px;
+    width: auto;
+    font-size: $big-big;
+    color: $main-color;
+    font-family: 'Audiowide', 'Poppins', monospace;
+    text-decoration: none;
+  }
+  
+}
+
+.navbar .navbar-nav .nav-link {
+  font-size: $normal-font-size;
+  color: $white;
+  margin: 15px 5px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+.navbar .navbar-nav .active {
+  color: $main-color !important;
+}
+.navbar-nav{
+  .dropdown{
+    .dropdown-menu{
+      -webkit-box-shadow: 0px 10px 40px -4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 10px 40px -4px rgba(0, 0, 0, 0.1); 
+      background: #1a1e25;
+      .dropdown-item{
+        color: $white;
+      }
+      .dropdown-item:hover{
+        background-color: transparent;
+        color: $main-color;
+      }
+    } 
+  }
+}
+.nav-scroll {
+  background: $nav-color;
+  -webkit-box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  position: fixed;
+  top: -100px;
+  height: 6rem;
+  left: 0;
+  width: 100%;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  -webkit-transform: translateY(100px);
+  transform: translateY(100px);
+  .space-head{
+    padding-bottom: 2rem !important;
+  }
+  
+}
+.nav-scroll .icon-bar {
+  color: $white;
+  
+}
+.nav-scroll .navbar-nav .nav-link {
+  color: $white;
+}
+.nav-scroll .navbar-nav .logo {
+  padding: 15px 0;
+  color: #111;
+}
+.nav-scroll .space-head {
+  padding: 20px 0 10px ;
+  padding-left: 30px !important;
+  margin-top: 0 !important;
+}
+
+
+.navbar-toggler{
+  outline: none !important;
+  float: right;
+  margin-top: 1.1rem;
+  .icon-bar{
+    height: 100%;
+    color: $white;
+    i{
+      font-size: $biggest-font-size;
+    }
+  }
+}
+/* ----------------------------------------------------------------
+     [ End Navbar ]
+-----------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+     [ 04 Start Header ]
+-----------------------------------------------------------------*/
+
+.header {
+  min-height: 100vh;
+  overflow: hidden;
+  .container{
+    height: auto;
+    .caption{
+      .o-hidden {
+        display: inline-block;
+      }
+      h1{
+        margin: 15px 0;
+        font-size: $bigger-big;
+        font-weight: 700;
+        font-family: inherit;
+        word-spacing: 2px;
+        letter-spacing: 2px;
+        -webkit-animation-delay: .6s;
+                animation-delay: .6s;
+      }
+      h5{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        -webkit-animation-delay: .2s;
+                animation-delay: .2s;
+      }
+      p{
+        -webkit-animation-delay: 1s;
+                animation-delay: 1s;
+        color: #eee;
+        font-size: $bigger-font-size;
+        margin-bottom: 5rem !important;
+      }
+    }  
+  }
+}
+
+
+
+
+.header .caption .butn {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+.header .caption.stwo h5 {
+  text-transform: capitalize;
+}
+.header .caption.stwo h1 {
+  font-weight: 700;
+}
+
+.slider .arrow, .slider-fade .arrow {
+  display: none !important;
+}
+.slider .owl-item, .slider-fade .owl-item {
+  min-height: 100vh;
+  position: relative;
+}
+.slider .item, .slider-fade .item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+.slider .item .caption, .slider-fade .item .caption {
+  z-index: 9;
+}
+.slider .owl-theme .owl-dots, .slider-fade .owl-theme .owl-dots {
+  position: absolute;
+  bottom: 5vh;
+  width: 100%;
+}
+.slider .owl-theme .owl-dots .owl-dot span, .slider-fade .owl-theme .owl-dots .owl-dot span {
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: rgba(200, 200, 200, 0.4);
+}
+.slider .owl-theme .owl-dots .owl-dot.active span,
+.slider .owl-theme .owl-dots .owl-dot:hover span, .slider-fade .owl-theme .owl-dots .owl-dot.active span,
+.slider-fade .owl-theme .owl-dots .owl-dot:hover span {
+  background: $main-color;
+}
+
+/* ----------------------------------------------------------------
+     [ End Header ]
+-----------------------------------------------------------------*/
+.valign {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.bg-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-fixed {
+  background-attachment: fixed;
+}
+
+
+
+.header-other{
+  height: 500px !important;
+}
