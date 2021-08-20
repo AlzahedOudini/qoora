@@ -16,12 +16,6 @@
         <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
 
         <title>{{ $title ?? 'Qoora' }}</title>
-
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased">
         <nav class="navbar navbar-expand-lg">
@@ -41,13 +35,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="{{ route('home') }}">Accueil</a>
+                            <a class="nav-link @if (request()->routeIs('home')) active @endif" href="{{ route('home') }}">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('about') }}">A propos</a>
+                            <a class="nav-link @if (request()->routeIs('about')) active @endif" href="{{ route('about') }}">A propos</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                            <a class="nav-link dropdown-toggle @if (request()->routeIs('services/*')) active @endif" data-toggle="dropdown" href="#" role="button"
                                aria-haspopup="true" aria-expanded="false">Services</a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="{{ route('media') }}">Media Management</a>
@@ -58,12 +52,12 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Livres</a>
+                            <a class="nav-link @if (request()->routeIs('livres')) active @endif" href="#">Livres</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Formations</a>
+                            <a class="nav-link @if (request()->routeIs('formations')) active @endif" href="#">Formations</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item @if (request()->routeIs('contact')) active @endif">
                             <a class="nav-link" href="{{ route('contact') }}" data-scroll-nav="5">Contact</a>
                         </li>
                     </ul>
