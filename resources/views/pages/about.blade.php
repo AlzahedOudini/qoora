@@ -1,4 +1,7 @@
-@extends('layouts.home', ['title' => 'Qoora - A propos de nous'])
+@extends('layouts.home', [
+    'title' => 'Qoora - A propos de nous',
+    'meta' => ['Qoora']
+])
 
 @section('content')
     <header class="valign bg-img parallaxie header-other" data-overlay-dark="6"

@@ -57,8 +57,9 @@
                         <li class="nav-item">
                             <a class="nav-link @if (request()->routeIs('formations')) active @endif" href="#">Formations</a>
                         </li>
-                        <li class="nav-item @if (request()->routeIs('contact')) active @endif">
-                            <a class="nav-link" href="{{ route('contact') }}" data-scroll-nav="5">Contact</a>
+                        <li class="nav-item">
+                            <a class="nav-link @if (request()->routeIs('contact')) active @endif" href="{{ route('contact') }}">Contact</a>
+{{--                            <a class="nav-link" href="{{ route('contact') }}" data-scroll-nav="5">Contact</a>--}}
                         </li>
                     </ul>
                 </div>

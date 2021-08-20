@@ -41,7 +41,7 @@ class PageController extends Controller
     /**
      * @return View
      */
-    public function graphic(): View
+    public function graphics(): View
     {
         return view('pages.graphic');
     }
@@ -49,7 +49,7 @@ class PageController extends Controller
     /**
      * @return View
      */
-    public function media(): View
+    public function medias(): View
     {
         return view('pages.media');
     }
@@ -57,8 +57,16 @@ class PageController extends Controller
     /**
      * @return View
      */
-    public function motion(): View
+    public function motions(): View
     {
         return view('pages.motion');
+    }
+
+    /**
+     * @return View
+     */
+    public function contact(): View
+    {
+        return view('pages.contact');
     }
 }
