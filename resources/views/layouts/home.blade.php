@@ -20,7 +20,6 @@
     <body class="font-sans antialiased">
         <nav class="navbar navbar-expand-lg">
             <div class=" space-head">
-
                 <!-- Logo -->
                 <a class="logo" href="#">
                     <span>Qoora</span>
